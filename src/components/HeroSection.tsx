@@ -7,7 +7,7 @@ const HeroSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const msg = `Hi, I'm ${form.name}. I'd like to book ${form.service || "an appointment"}. My number is ${form.phone}.`;
-    window.open(`https://wa.me/61424835213?text=${encodeURIComponent(msg)}`, "_blank");
+    window.open(`https://wa.me/61422931252?text=${encodeURIComponent(msg)}`, "_blank");
   };
 
   return (
