@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "sonner";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
@@ -8,6 +9,7 @@ const HeroSection = () => {
     e.preventDefault();
     const msg = `Hi, I'm ${form.name}. I'd like to book ${form.service || "an appointment"}. My number is ${form.phone}.`;
     const url = `https://api.whatsapp.com/send?phone=61422931252&text=${encodeURIComponent(msg)}`;
+    toast.success("Message sent");
     window.location.href = url;
   };
 
